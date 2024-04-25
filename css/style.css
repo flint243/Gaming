@@ -1,0 +1,524 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p span{
+    font-weight: bold;
+    }
+
+/*-------------------------HIDE MENU MOBILE TOGGLE----------------------------*/
+.container_hamburger {
+    background: #33619387;
+    color: #6ecddd;
+    font-family: Arial;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+
+  #toggle {
+    display: none;
+  }
+  
+  /** Hamburger **/
+  .hamburger {
+    position: absolute;
+    top: 4em;
+    right: 0%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 3em;
+    height: 45px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .hamburger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #f8982b;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /** Nav Styles **/
+  .navToggle {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #090e6bf4;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+    z-index: 1;
+  }
+  .navToggle-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  #menuToggle {
+    text-align: left;
+    margin-left: 25%;
+  }
+  #menuToggle a {
+    position: relative;
+    text-decoration: none;
+    color: #6ecddd;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+    background-color: #dd996e;
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #menuToggle a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: white;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+  }
+  #menuToggle a:hover {
+    color: white;
+  }
+  #menuToggle a:hover:before {
+    height: 100%;
+  }
+  
+  /** Animations **/
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  #toggle:checked + .hamburger + .navToggle {
+    top: 0;
+    transform: scale(1);
+  }
+
+
+/************************ HEADER VISIBLE ***************************************/
+header{
+    background: url('../assets/img/header.jpeg');
+    background-size: 110% 220%;
+    background-position: center;
+    background-color: green;
+    height: 350px;
+    width: 100%;
+    color: white;
+}
+header h1{
+    color: white;
+    position: relative;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 3em;
+}
+#game p{
+    width: 10%;
+    color: white;
+    font-size: 1.5em;
+}
+
+#gameIn{
+    display: none;
+}
+
+nav{
+    display: flex;
+    color:white;
+    position: relative;
+    padding: 10px 10px 0 30px;
+}
+
+#hostMenu{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 20px;
+    right: 0px;
+}
+#hostMenu ul{
+    display: flex;
+    width: auto;
+    height: auto;
+    position: relative;
+    top:0px;
+    list-style-type: none;
+    }
+    
+#hostMenu li a{
+        height: auto;
+        position: relative;
+        top: auto;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 20px;
+    }
+    
+#hostMenu li a::before{/*BLUE MENU UNDERLINE*/
+    content:"";
+    width:100%;
+    height: auto;
+    position:absolute;
+    top:-20px;
+    left:0px;
+    border-top:2px solid #4bb1f2;
+    display:none;
+}
+#hostMenu li a:hover::before{
+    display:block;
+}
+#hostMenu li a:hover{
+    color:gray;
+}
+/*----------------------------------------------------------*/
+
+/* MAIN SECTION */
+section#main{
+    width: auto;
+    position: relative;
+    top: 0px;
+}
+#titre{
+    font-family: Arial;
+    text-align: center;
+}
+#titre h1{
+    color: black;
+    position: relative;
+    font-size: 3.3em;
+    margin: 10px 0px 0px 0px;
+}
+hr{
+    border:1px solid grey;
+    margin-bottom: 10px;
+}
+#titre p{
+    margin: 0px;
+    font-size: 1.5em;
+}
+#para p{
+    width: auto;
+    top: 507px;
+    left: -595px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 50px;
+    margin-bottom: 0px;
+    background-color: rgba(103, 105, 105, 0.042);
+}
+hr{
+    width: 20%;
+    color: rgba(170, 209, 236, 0.139);
+}
+
+/* MAIN1 SECTION */
+#main1{
+    width: auto;
+    padding: 50px;
+    background-color: rgb(53, 52, 52);
+}
+#main1 h1{
+    margin-top: 0px;
+}
+#inside{
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+    background-color: black; 
+}
+#inside h1{
+    font-size: 3em;
+    color: white;
+}
+#inside p{
+    text-align: center;
+    color: white;
+}
+
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    }
+.event>* {
+    width: 50%;
+}
+/*---------------------------------------------*/
+
+/* VR SECTION */
+.vr{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: row;
+    grid-row-gap: 0px;
+}
+
+.vr img{
+    width: 100%;
+}
+
+.txtvr{
+    width: 100;
+    padding: 20px 0;
+    background-color: white;
+}
+.txtvrIn{
+    width: auto;
+    margin-left: 15%;
+    margin-top: 100px;
+    padding: 10px;
+}
+/*---------------------------------------------------*/
+
+/* RETRO1 SECTION */
+.retro1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: row;
+    grid-row-gap: 0px;
+    background-color: rgb(49, 49, 49);
+}
+.retro1 img{
+    width: 100%;
+}
+
+.txtretro1In{
+    width: 55%;
+    color: white;
+    margin-left: 15%;
+    margin-top: 100px;
+    padding: 10px;
+}
+/*----------------------------------------------*/
+
+/* RETRO2 SECTION */
+.retro2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: row;
+}
+
+.retro2 img{
+    width: 100%;
+}
+
+.txtretro2{
+    width: 56%;
+    margin-left: 15%;
+    margin-top: 70px;
+    background-color: white;
+}
+/*--------------------------------------------*/
+
+/* FOOTER */
+footer{
+    height:auto;
+    width: 100%;
+    background-color: rgb(38, 34, 29);
+}
+
+.event_footer{
+    display: flex;
+    width: 30%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+.event_footer a{
+    width: auto;
+    justify-content: space-around;
+}
+footer p{
+    text-align: center;
+    padding: 5px;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0px;
+}
+
+#copy p{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.70em;
+    color: gray;
+}
+/*-------------------------------*/
+
+/************************************************** MEDIA QUERY ********************************************/
+
+/**************** 500px **********************/
+@media only screen and (max-width:500px){
+        #gameIn{
+            display: block;
+            position: absolute;
+            top: 50px;
+            width: 100%;
+        }
+        #gameIn p{
+            width: 60%;
+            height: auto;
+            position: relative;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color: red;
+            background-color:rgba(255, 255, 255, 0.416);
+            font-size: 3em;
+            padding: 10px 0px 10px 0px;
+            border-radius: 5px;
+        }
+
+        nav{
+            display: none;
+        }
+        header h1{
+            top: 200px;
+            font-size: 1.5em;
+            letter-spacing: 5px;
+        }
+
+        .container_hamburger {
+        display: block;
+        }
+        /*---------------*/
+
+        #titre h1{
+            top: 0px;     
+            }
+            hr{
+                width: 50%;
+            }
+        #para{
+            font-size: 20px;
+        }
+    
+        /* MAIN */
+        #main{
+            padding: 10px;
+        }
+        /*----------------*/
+
+        /* MAIN1 */
+        #inside h1{
+            position: relative;
+            font-size: 2.3em;
+        }
+        /*-------------------*/
+
+        /* VR */
+        .vr{
+            display: grid;
+        grid-template-columns: repeat(1, 1fr);
+            }
+        .vr img{
+            width:100%
+        }
+
+        .txtvrIn{
+            margin-top: 0px;
+            margin-left: 12%;
+        }
+        .txtvrIn h1{
+            top: -50px;
+            font-size: 2.3em;
+        }
+        /*------------------------------*/
+
+        /* RETRO1 */
+        .retro1{
+            display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        }
+
+        .txtretro1In{
+            width: 80%;
+            margin-top: 0px;
+            margin-left: 12%;
+        }
+        .txtretro1In h1{
+            top: -50px;
+            font-size: 2.3em;
+        }
+        /*----------------------------*/
+
+        /* RETRO2 */
+        .retro2{
+            display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        }
+
+        .txtretro2{
+            width: 80%;
+            margin-top: 0px;
+            margin-left: 10%;
+        }
+
+        #txtIn h1{
+
+            top: -50px;
+            font-size: 2.3em;
+        }
+        /*---------------------------*/
+
+        /* FOOTER */
+        footer{
+            height: 200px;
+        }
+        .event_footer{
+            width: 50%;
+            position: relative;
+            margin-left: 40px;
+        }
+        a img.event_footer{
+            width: 50px;
+            position: relative;
+        }
+        
+        footer p{
+            margin-top:30px;
+            font-size: 2.5em;
+        }
+        #copy p{
+            margin-top: 20px;
+        }
+        /*---------------------------*/
+}
